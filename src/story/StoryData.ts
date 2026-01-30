@@ -13,10 +13,11 @@ export interface StoryNode {
 }
 
 // Local Images (mapped to public/ folder)
-const IMG_CAT = "/KittenChina.jpg";         // Paws in China
-const IMG_SQUIRREL = "/SquirrelCalifornia.jpg"; // Nutty in California
-const IMG_SUNSET = "/SunriseSunsetMaui.jpg";     // Maui Arrival
-const IMG_TURTLE = "/SeaTurtleMaui.jpg";     // Sea Turtle Meeting
+// We use import.meta.env.BASE_URL to ensure the path is correct when deployed to GitHub Pages (which uses a subdirectory)
+const IMG_CAT = import.meta.env.BASE_URL + "KittenChina.jpg";         // Paws in China
+const IMG_SQUIRREL = import.meta.env.BASE_URL + "SquirrelCalifornia.jpg"; // Nutty in California
+const IMG_SUNSET = import.meta.env.BASE_URL + "SunriseSunsetMaui.jpg";     // Maui Arrival
+const IMG_TURTLE = import.meta.env.BASE_URL + "SeaTurtleMaui.jpg";     // Sea Turtle Meeting
 
 // 4. Endings
 const endingBest: StoryNode = {
